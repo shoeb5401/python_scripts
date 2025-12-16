@@ -4,7 +4,7 @@ import os
 file_path = str(input("Input a file path, You want to Check:"))
 exist = os.path.exists(file_path)
 print(f"Your file path is: {file_path}\n")
-if exist and file_path.startswith(('/','.','..')):
+if exist :
     print("Your file path exist")
 elif file_path.startswith(('/','.','..')):
     print("Your Path doesnot exist\n")
