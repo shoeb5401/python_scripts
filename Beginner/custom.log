@@ -1,0 +1,263 @@
+001 2025-12-17 10:00:00 INFO  App startup initiated
+002 2025-12-17 10:00:01 DEBUG Loading configuration files
+003 2025-12-17 10:00:02 INFO  Configuration loaded successfully
+004 2025-12-17 10:00:03 INFO  Connecting to DB
+005 2025-12-17 10:00:04 DEBUG DB connection string resolved
+006 2025-12-17 10:00:05 INFO  DB connection established
+007 2025-12-17 10:00:06 INFO  CACHE initialized
+008 2025-12-17 10:00:07 DEBUG CACHE warm-up started
+009 2025-12-17 10:00:08 INFO  CACHE warm-up completed
+010 2025-12-17 10:00:09 INFO  Listening on port 8080
+
+011 2025-12-17 10:01:00 INFO  AUTH login attempt user=jdoe
+012 2025-12-17 10:01:01 DEBUG AUTH validating credentials
+013 2025-12-17 10:01:01 INFO  AUTH login success user=jdoe
+014 2025-12-17 10:01:05 INFO  Request GET /dashboard
+015 2025-12-17 10:01:05 DEBUG DB query started
+016 2025-12-17 10:01:06 INFO  DB query completed
+017 2025-12-17 10:01:06 INFO  Response 200 sent
+
+018 2025-12-17 10:02:10 INFO  PAYMENT initiated order=ORD1001
+019 2025-12-17 10:02:11 DEBUG PAYMENT validating card
+020 2025-12-17 10:02:12 INFO  PAYMENT authorized order=ORD1001
+021 2025-12-17 10:02:12 INFO  PAYMENT completed order=ORD1001
+022 2025-12-17 10:02:13 INFO  DB transaction committed
+
+023 2025-12-17 10:03:00 INFO  AUTH login attempt user=asmith
+024 2025-12-17 10:03:01 WARN  AUTH invalid password user=asmith
+025 2025-12-17 10:03:02 WARN  AUTH retry attempt user=asmith
+026 2025-12-17 10:03:03 ERROR AUTH account locked user=asmith
+
+027 2025-12-17 10:04:00 INFO  Request GET /reports
+028 2025-12-17 10:04:01 DEBUG DB query started
+029 2025-12-17 10:04:05 WARN  DB slow query detected
+030 2025-12-17 10:04:06 INFO  DB query completed
+031 2025-12-17 10:04:06 INFO  Response 200 sent
+
+032 2025-12-17 10:05:10 INFO  PAYMENT initiated order=ORD1002
+033 2025-12-17 10:05:12 ERROR PAYMENT gateway TIMEOUT
+034 2025-12-17 10:05:12 WARN  PAYMENT RETRY attempt=1
+035 2025-12-17 10:05:14 INFO  PAYMENT authorized order=ORD1002
+036 2025-12-17 10:05:15 INFO  PAYMENT completed order=ORD1002
+
+037 2025-12-17 10:06:00 DEBUG CACHE fetch key=user:123
+038 2025-12-17 10:06:00 INFO  CACHE hit key=user:123
+039 2025-12-17 10:06:30 DEBUG CACHE fetch key=user:456
+040 2025-12-17 10:06:30 WARN  CACHE miss key=user:456
+041 2025-12-17 10:06:31 INFO  DB query started
+042 2025-12-17 10:06:32 INFO  DB query completed
+043 2025-12-17 10:06:33 INFO  CACHE updated key=user:456
+
+044 2025-12-17 10:07:00 INFO  Scheduled job cleanup started
+045 2025-12-17 10:07:01 DEBUG Deleting expired sessions
+046 2025-12-17 10:07:02 INFO  Cleanup removed 42 sessions
+047 2025-12-17 10:07:03 INFO  Scheduled job cleanup completed
+
+048 2025-12-17 10:08:00 INFO  AUTH logout user=jdoe
+049 2025-12-17 10:08:01 INFO  Session invalidated user=jdoe
+
+050 2025-12-17 10:09:00 INFO  Request POST /api/data
+051 2025-12-17 10:09:01 DEBUG Parsing request payload
+052 2025-12-17 10:09:01 INFO  DB insert started
+053 2025-12-17 10:09:02 INFO  DB insert completed
+054 2025-12-17 10:09:02 INFO  Response 201 sent
+
+055 2025-12-17 10:10:00 WARN  High memory usage detected
+056 2025-12-17 10:10:01 DEBUG Memory usage=82%
+057 2025-12-17 10:10:05 INFO  Memory usage normalized
+
+058 2025-12-17 10:11:00 INFO  PAYMENT initiated order=ORD1003
+059 2025-12-17 10:11:01 DEBUG PAYMENT contacting gateway
+060 2025-12-17 10:11:03 ERROR PAYMENT declined order=ORD1003
+061 2025-12-17 10:11:04 WARN  PAYMENT failed order=ORD1003
+
+062 2025-12-17 10:12:00 INFO  AUTH login attempt user=bwilliams
+063 2025-12-17 10:12:01 INFO  AUTH login success user=bwilliams
+064 2025-12-17 10:12:05 INFO  Request GET /profile
+065 2025-12-17 10:12:05 INFO  Response 200 sent
+
+066 2025-12-17 10:13:00 DEBUG Health check ping
+067 2025-12-17 10:13:00 INFO  Health check OK
+
+068 2025-12-17 10:14:00 WARN  External API TIMEOUT
+069 2025-12-17 10:14:01 WARN  RETRY external API attempt=1
+070 2025-12-17 10:14:02 INFO  External API call succeeded
+
+071 2025-12-17 10:15:00 INFO  Request DELETE /api/item/55
+072 2025-12-17 10:15:01 INFO  DB delete started
+073 2025-12-17 10:15:02 INFO  DB delete completed
+074 2025-12-17 10:15:02 INFO  Response 204 sent
+
+075 2025-12-17 10:16:00 DEBUG CACHE eviction started
+076 2025-12-17 10:16:01 INFO  CACHE evicted 10 entries
+077 2025-12-17 10:16:02 INFO  CACHE eviction completed
+
+078 2025-12-17 10:17:00 ERROR DB connection lost
+079 2025-12-17 10:17:01 WARN  DB reconnect attempt=1
+080 2025-12-17 10:17:03 INFO  DB reconnected successfully
+
+081 2025-12-17 10:18:00 INFO  Request GET /metrics
+082 2025-12-17 10:18:01 INFO  Response 200 sent
+
+083 2025-12-17 10:19:00 INFO  PAYMENT initiated order=ORD1004
+084 2025-12-17 10:19:01 INFO  PAYMENT authorized order=ORD1004
+085 2025-12-17 10:19:02 INFO  PAYMENT completed order=ORD1004
+
+086 2025-12-17 10:20:00 WARN  Disk usage high
+087 2025-12-17 10:20:01 DEBUG Disk usage=91%
+088 2025-12-17 10:20:05 INFO  Disk cleanup started
+089 2025-12-17 10:20:10 INFO  Disk cleanup completed
+
+090 2025-12-17 10:21:00 INFO  AUTH password change user=bwilliams
+091 2025-12-17 10:21:01 INFO  AUTH password updated successfully
+
+092 2025-12-17 10:22:00 DEBUG Background worker heartbeat
+093 2025-12-17 10:22:00 INFO  Worker status=healthy
+
+094 2025-12-17 10:23:00 INFO  Request PUT /api/item/77
+095 2025-12-17 10:23:01 INFO  DB update started
+096 2025-12-17 10:23:02 INFO  DB update completed
+097 2025-12-17 10:23:02 INFO  Response 200 sent
+
+098 2025-12-17 10:24:00 WARN  Network latency detected
+099 2025-12-17 10:24:01 INFO  Latency returned to normal
+
+100 2025-12-17 10:25:00 INFO  PAYMENT initiated order=ORD1005
+101 2025-12-17 10:25:01 ERROR PAYMENT TIMEOUT
+102 2025-12-17 10:25:02 WARN  PAYMENT RETRY attempt=1
+103 2025-12-17 10:25:04 WARN  PAYMENT RETRY attempt=2
+104 2025-12-17 10:25:05 ERROR PAYMENT failed order=ORD1005
+
+105 2025-12-17 10:26:00 INFO  AUTH logout user=bwilliams
+106 2025-12-17 10:26:01 INFO  Session invalidated user=bwilliams
+
+107 2025-12-17 10:27:00 DEBUG CACHE stats hits=120 misses=15
+108 2025-12-17 10:27:01 INFO  CACHE stats logged
+
+109 2025-12-17 10:28:00 INFO  Scheduled backup started
+110 2025-12-17 10:28:05 INFO  Scheduled backup completed
+
+111 2025-12-17 10:29:00 INFO  Request GET /status
+112 2025-12-17 10:29:00 INFO  Response 200 sent
+
+113 2025-12-17 10:30:00 WARN  CPU usage high
+114 2025-12-17 10:30:01 DEBUG CPU usage=88%
+115 2025-12-17 10:30:05 INFO  CPU usage normalized
+
+116 2025-12-17 10:31:00 INFO  PAYMENT initiated order=ORD1006
+117 2025-12-17 10:31:01 INFO  PAYMENT authorized order=ORD1006
+118 2025-12-17 10:31:02 INFO  PAYMENT completed order=ORD1006
+
+119 2025-12-17 10:32:00 INFO  AUTH login attempt user=ckent
+120 2025-12-17 10:32:01 INFO  AUTH login success user=ckent
+
+121 2025-12-17 10:33:00 INFO  Request GET /admin
+122 2025-12-17 10:33:01 ERROR AUTH unauthorized access user=ckent
+123 2025-12-17 10:33:01 INFO  Response 403 sent
+
+124 2025-12-17 10:34:00 DEBUG Health check ping
+125 2025-12-17 10:34:00 INFO  Health check OK
+
+126 2025-12-17 10:35:00 WARN  External service TIMEOUT
+127 2025-12-17 10:35:01 WARN  RETRY external service attempt=1
+128 2025-12-17 10:35:03 INFO  External service recovered
+
+129 2025-12-17 10:36:00 INFO  Request POST /logout
+130 2025-12-17 10:36:01 INFO  AUTH logout user=ckent
+
+131 2025-12-17 10:37:00 INFO  CACHE flush started
+132 2025-12-17 10:37:01 INFO  CACHE flush completed
+
+133 2025-12-17 10:38:00 INFO  Scheduled job report started
+134 2025-12-17 10:38:05 INFO  Scheduled job report completed
+
+135 2025-12-17 10:39:00 INFO  Request GET /reports/daily
+136 2025-12-17 10:39:01 INFO  Response 200 sent
+
+137 2025-12-17 10:40:00 WARN  Low disk space
+138 2025-12-17 10:40:02 INFO  Disk cleanup scheduled
+
+139 2025-12-17 10:41:00 DEBUG Background worker heartbeat
+140 2025-12-17 10:41:00 INFO  Worker status=healthy
+
+141 2025-12-17 10:42:00 INFO  PAYMENT initiated order=ORD1007
+142 2025-12-17 10:42:01 INFO  PAYMENT authorized order=ORD1007
+143 2025-12-17 10:42:02 INFO  PAYMENT completed order=ORD1007
+
+144 2025-12-17 10:43:00 INFO  AUTH login attempt user=dprince
+145 2025-12-17 10:43:01 WARN  AUTH invalid password user=dprince
+146 2025-12-17 10:43:02 ERROR AUTH account locked user=dprince
+
+147 2025-12-17 10:44:00 INFO  Request GET /help
+148 2025-12-17 10:44:00 INFO  Response 200 sent
+
+149 2025-12-17 10:45:00 WARN  Network packet loss detected
+150 2025-12-17 10:45:02 INFO  Network stable
+
+151 2025-12-17 10:46:00 INFO  Scheduled cleanup started
+152 2025-12-17 10:46:02 INFO  Scheduled cleanup completed
+
+153 2025-12-17 10:47:00 DEBUG CACHE stats hits=145 misses=18
+154 2025-12-17 10:47:01 INFO  CACHE stats logged
+
+155 2025-12-17 10:48:00 INFO  Request PUT /settings
+156 2025-12-17 10:48:01 INFO  DB update completed
+157 2025-12-17 10:48:01 INFO  Response 200 sent
+
+158 2025-12-17 10:49:00 WARN  API response slow
+159 2025-12-17 10:49:01 INFO  API performance normal
+
+160 2025-12-17 10:50:00 INFO  PAYMENT initiated order=ORD1008
+161 2025-12-17 10:50:01 ERROR PAYMENT declined order=ORD1008
+
+162 2025-12-17 10:51:00 INFO  AUTH logout user=system
+
+163 2025-12-17 10:52:00 DEBUG Health check ping
+164 2025-12-17 10:52:00 INFO  Health check OK
+
+165 2025-12-17 10:53:00 INFO  Request GET /api/version
+166 2025-12-17 10:53:00 INFO  Response 200 sent
+
+167 2025-12-17 10:54:00 WARN  DB connection pool near limit
+168 2025-12-17 10:54:02 INFO  DB pool stabilized
+
+169 2025-12-17 10:55:00 INFO  Scheduled backup started
+170 2025-12-17 10:55:05 INFO  Scheduled backup completed
+
+171 2025-12-17 10:56:00 DEBUG Background worker heartbeat
+172 2025-12-17 10:56:00 INFO  Worker status=healthy
+
+173 2025-12-17 10:57:00 INFO  PAYMENT initiated order=ORD1009
+174 2025-12-17 10:57:01 INFO  PAYMENT authorized order=ORD1009
+175 2025-12-17 10:57:02 INFO  PAYMENT completed order=ORD1009
+
+176 2025-12-17 10:58:00 INFO  AUTH login attempt user=admin
+177 2025-12-17 10:58:01 INFO  AUTH login success user=admin
+
+178 2025-12-17 10:59:00 INFO  Request GET /admin/dashboard
+179 2025-12-17 10:59:01 INFO  Response 200 sent
+
+180 2025-12-17 11:00:00 WARN  Configuration reload required
+181 2025-12-17 11:00:02 INFO  Configuration reloaded
+
+182 2025-12-17 11:01:00 DEBUG CACHE fetch key=stats:global
+183 2025-12-17 11:01:00 INFO  CACHE hit key=stats:global
+
+184 2025-12-17 11:02:00 INFO  Request POST /shutdown
+185 2025-12-17 11:02:01 WARN  Shutdown requested by admin
+186 2025-12-17 11:02:02 INFO  Closing DB connections
+187 2025-12-17 11:02:03 INFO  Flushing CACHE
+188 2025-12-17 11:02:04 INFO  Stopping background workers
+189 2025-12-17 11:02:05 INFO  Server shutdown initiated
+190 2025-12-17 11:02:06 INFO  Server shutdown completed
+
+191 2025-12-17 11:02:07 INFO  Process exited cleanly
+192 2025-12-17 11:02:08 DEBUG Exit code=0
+193 2025-12-17 11:02:09 INFO  Log file closed
+194 2025-12-17 11:02:10 INFO  ---
+195 2025-12-17 11:02:11 INFO  ---
+196 2025-12-17 11:02:12 INFO  ---
+197 2025-12-17 11:02:13 INFO  ---
+198 2025-12-17 11:02:14 INFO  ---
+199 2025-12-17 11:02:15 INFO  ---
+200 2025-12-17 11:02:16 INFO  End of log
