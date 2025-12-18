@@ -2,6 +2,9 @@ import os , pathlib
 
 
 file_path = str(input("Input a file path, You want to Check:"))
+if not file_path:
+    print("Path cannot be empty")
+    exit(1)
 # exist = os.path.exists(file_path)
 exist = pathlib.Path.is_file(file_path)
 print(f"Your file path is: {file_path}\n")

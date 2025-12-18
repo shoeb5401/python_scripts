@@ -1,7 +1,9 @@
 import os 
 
 custom_env = str(input("Input the env variable you want to search: ")).upper()
-
+if not custom_env:
+    print("env cannot be empty")
+    exit(1)
 
 if os.getenv(custom_env) == None:
     print("Enter a Valid ENV variable")

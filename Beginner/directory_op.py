@@ -2,6 +2,9 @@ from pathlib import Path
 from datetime import date
 
 dir_path = input("Enter the Path of the Directory: ")
+if not dir_path:
+    print("Path cannot be empty")
+    exit(1)
 p = Path(dir_path)
 
 if p.exists() and p.is_dir():
