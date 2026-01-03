@@ -1,7 +1,4 @@
-try :
-    import platform, psutil
-except:
-    raise ImportError("Error in importing the packages.")
+import platform, psutil
 
 class system_info:
 
